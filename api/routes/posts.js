@@ -5,7 +5,12 @@ const Post = require("../models/Post");
 
 //CREATE POST
 router.post("/", async (req, res) => {
-    const newPost = new Post(req.body);
+    const options = {
+        username: req.user,
+        ...req.body
+    }
+    const newPost = new Post(options);
+    console.log(req.user)
     try {
         const savedPost = await newPost.save();
         res.status(200).json(savedPost)
