@@ -1,13 +1,13 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const authRoute = require("./routes/auth");
-const userRoute = require("./routes/users");
-const postRoute = require("./routes/posts");
-const categoryRoute = require("./routes/categories");
+const authRoute = require("./auth");
+const userRoute = require("./users");
+const postRoute = require("./posts");
+const categoryRoute = require("./categories");
 
-router.use("/api/auth", authRoute);
-router.use("/api/users", userRoute);
-router.use("/api/posts", postRoute);
-router.use("/api/categories", categoryRoute);
+router.use("/auth", authRoute);
+router.use("/users", userRoute);
+router.use("/posts", postRoute);
+router.use("/categories", categoryRoute);
 
 module.exports = router;
