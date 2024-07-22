@@ -12,3 +12,5 @@ const storage = multer.diskStorage({
     res.status(200).json("File has been uploaded");
   });
   
+
+module.exports = ImageService;
