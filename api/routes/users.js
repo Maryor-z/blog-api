@@ -11,16 +11,13 @@ const { UserServices } = require("../services");
 
 const { updateUser, deleteUser, getUserById, getAllUser} = UserServices;
 const {fetchAllUser} = UserController;
-//UPDATE
+
 router.put("/:id", updateUser);
 
-//DELETE
 router.delete("/:id", deleteUser);
 
-//GET USER
 router.get("/:id", getUserById)
 
-//GET ALL USER
 router.get("/", getAllUser, paginatedResults, fetchAllUser)
 
 

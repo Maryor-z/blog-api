@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-
+const { PostServices } = require("../services")
 class Authenticator {
   accessTokenSecret;
 

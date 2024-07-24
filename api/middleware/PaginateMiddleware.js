@@ -25,8 +25,7 @@ class PaginateMiddleware {
             }
 
             try {
-                results.results = await User.find().limit(3).skip(startIndex).exec()
-                console.log(results)
+                results.results = await User.find().limit(limit).skip(startIndex).exec()
                 req.paginatedResults = results
 
                 next()
